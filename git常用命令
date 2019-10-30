@@ -1,0 +1,15 @@
+git 常用命令
+-----------------------
+提交文件到暂存库
+git add .
+
+提交到git仓库
+git commit "commit"
+
+查看当前工作空间的状态
+git status
+
+查看修改了什么 
+git diff <filename>
+
+
