@@ -108,10 +108,46 @@ ddddddddddddddddddddddd
 BUG分支
 Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作
 
-cccccccc
-cccccccc
+git stash 锁住现在的工作空间
+git stash apply 恢复工作空间
+git stash drop 删除 stash内容
+git stash pop 恢复的同时也把stash内容删了
+git stash list 查看stash的东西。。。
 
-修改bug.....
+---------------------------------------------
+cherry-pick命令，让我们能复制一个特定的提交到当前分支
+
+等等 我先去修改bug
+---------------------------------------------
+多人协作
+推送分支
+master主分支与 dev开发分支都需要与远程同步
+git push origin master
+git push origin dev
+bug分支用于修改bug 不用推送到远程
+feature分支 （开发新的功能）
+
+抓取分支
+git clone git地址
+这个时候只看得到默认分支master
+要在dev分支上开发就需要创建远程origin 的dev分支到本地
+git checkout -b dev origin/dev
+推送到远程仓库
+git push origin dev
+--------------------------------------------------------
+推送失败，因为你的小伙伴的最新提交和你试图推送的提交有冲突
+解决办法：
+先用git pull把最新的提交从origin/dev抓下来，
+然后，在本地合并，解决冲突，再推送
+
+------------------------------------------------------
+首先，可以试图用git push origin <branch-name>推送自己的修改；
+
+如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+
+如果合并有冲突，则解决冲突，并在本地提交；
+
+没有冲突或者解决掉冲突后，再用git push origin <branch-name>推送就能成功！
 
 
 
