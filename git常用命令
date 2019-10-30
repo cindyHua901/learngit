@@ -17,5 +17,93 @@ git log命令显示从最近到最远的提交日志，我们可以看到3次提
 git log
 git log --pretty=oneline 
 
+滚到某一个版本
+git reset --hard <版本号的前几位>
+
+查看历史命令
+git reflog
+-----------------------------------------------------
+版本库有工作区 版本库（暂存区 head指的版本）
+工作区-->add -->版本库(暂存区) --> commit -->版本库（head指向的版本）
+----------------------------------------------------
+管理修改   git跟踪并管理的是修改 而不是文件
+
+查看工作区与版本库里最新版本的区别
+git diff HEAD -- <filename>
+
+-----------------------------------
+撤销修改
+撤销工作区的修改：
+git checkout -- <filename>
+撤销暂存区的修改 HEAD表示版本库里的最新版本
+git reset HEAD <filename>
+撤销提交到版本库的修改
+git reset --hard  HEAD^^
+
+-----------------------------------
+删除文件
+git rm <filename>
+git commit
+误删的，可以从版本库里找  一键还原
+git checkout -- <filename>
+----------------------------------
+
+远程仓库
+生成 ssh key
+ssh-keygen -t rsa -C "youremail@example.com"
+关联远程仓库(origin) 
+git remote add origin <远程仓库地址>
+把本地仓库的内容推送到远程仓库
+git push -u origin master 
+
+把当前master分支推送到远程
+git push origin master
+
+从远程仓库克隆
+ git clone <远程仓库地址>
+
+------------------------------
+分支管理  使用分支完成某个任务，合并后再删掉分支
+HEAD指向的是当前分支！！！
+查看当前有哪些分支 并且在哪个分支上*
+git branch  
+创建分支并切换到分支
+git checkout -b <分支名>
+
+相当于
+git branch <分支名>
+git checkout <分支名>
+
+合并分支
+将指定分支合并到当前分支
+git merge <分支名>
+
+删除分支
+git branch -d <分支名>
+
+--------------------------------------
+解决冲突
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
