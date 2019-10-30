@@ -12,4 +12,10 @@ git status
 查看修改了什么 
 git diff <filename>
 
+查看历史记录
+git log命令显示从最近到最远的提交日志，我们可以看到3次提交
+git log
+git log --pretty=oneline 
+
+
 
