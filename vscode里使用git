@@ -1,0 +1,30 @@
+1 安装一个git history插件 可以查看整个仓库文件提交历史及修改的地方  √
+2 克隆仓库
+    ctrl + shift + p打开命令面板
+    输入 >Git:clone 回车后输入仓库地址即可
+3 修改文件的时候
+    红色箭头表示删除行
+    蓝色箭头表示修改
+    绿色箭头表示新增
+4 
+
+    +M 修改了没有 add
+    -M add了没有commit
+    M commit了
+5 提交代码到暂存区
+    git add.  或者点 +
+    git commit "commit msg" 或者 √
+6 解决冲突
+可以同时保存修改 或者保存当前 或者保存已提交
+
+7 使用diff工具
+打开git config 编辑
+git config --global -e  
+
+vscode 作为git的默认编辑器
+git config --global core.editor "code --wait"
+
+8 git 自动拉取
+在设置中输入 git.autofetch 设置为 true
+
+
