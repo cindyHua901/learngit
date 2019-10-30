@@ -151,6 +151,25 @@ git push origin dev
 
 修改了bug
 
+-------------------------------------------------------
+标签
+创建标签  默认标签是打在最新提交的commit上
+git tag <tagName>
+查看tag标签  这个是按照字幕顺序排列的
+git tag 
+如果忘记打标签了 
+就找到需要打标签的版本号（commit ID）
+git tag <tagName> 版本号的前几位
+
+git show <tagName> 查看文字说明
+
+删除标签
+
+git tag -d <tagName>
+
+如果推送到远程的 那就需要先删除本地的 再删除远程的
+git tag -d <tagName>
+git push origin :refs/tags/<tagName>
 
 
 
