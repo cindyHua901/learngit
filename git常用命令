@@ -101,9 +101,15 @@ ffffff 有冲突吗》》》
 ddddddddddddddddddddddd
 我是一个冲突！！！
 
+合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息
+--no-ff参数，表示禁用Fast forward
 
+------------------------------------------------
+BUG分支
+Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作
 
-
+cccccccc
+cccccccc
 
 
 
